@@ -1,0 +1,56 @@
+/* Typing effect container */
+.typing-text {
+    font-size: 2rem; /* Large font size */
+    font-weight: bold;
+    white-space: nowrap; /* Ensures the text doesn't wrap */
+    overflow: hidden; /* Hides overflow */
+    display: inline-block;
+    width: 0;
+    color: white; /* Start color */
+    animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite, colorChange 3s ease-in-out forwards; /* Speed increased */
+    position: relative;
+  }
+  
+  /* Typing animation */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  /* Blinking cursor */
+  @keyframes blink {
+    0% {
+      border-right-color: transparent;
+    }
+    50% {
+      border-right-color: rgb(100, 159, 247);
+    }
+    100% {
+      border-right-color: transparent;
+    }
+  }
+  
+  /* Color change animation */
+  @keyframes colorChange {
+    0% {
+      color: white;
+    }
+    50% {
+      color: blueviolet;
+    }
+    100% {
+      color: blueviolet;
+    }
+  }
+  
+  /* For smaller screens, adjust font size */
+  @media (max-width: 768px) {
+    .typing-text {
+      font-size: 1.5rem;
+    }
+  }
+  
